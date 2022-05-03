@@ -1,19 +1,14 @@
-from math import floor
+from decimal import Decimal, getcontext
+getcontext().prec = 150
 def solution(s):
-    # global ref2
+    d2 = Decimal(2).sqrt()-1
     n = int(s)
     l=[n]
-    # alpha =sqrt(2)
-    # beta = alpha/(alpha-1)
-
     while l[-1]!=0:
-        l.append(floor(frac_sqrt_2_till_100*l[-1]//(10**100)))
-    # print(l)17677669529663689274023919016659124224
-        #     17677669529663689274023919016659124224
-    # print(l)
+        l.append(int(d2*l[-1]))
     f=[]
     for i in range(len(l)-1):
-        F = floor(l[i]*l[i+1] + l[i]*(l[i]+1)/2 - l[i+1]*(l[i+1]+1)/2)
+        F = l[i]**2 + 2*l[i]*l[i+1] + l[i] - l[i+1] - l[i+1]**2
         f.append(F)
     ans = 0
     for i in range(len(f)):
@@ -21,7 +16,7 @@ def solution(s):
             ans-=f[i]
         else:
             ans+=f[i]
-    # ref2 = f 
-    return str(ans)
-frac_sqrt_2_till_100 = 4142135623730950488016887242096980785696718753769480731766797379907324784621070388503875343276415727
-print(solution('1234564'))
+    ref2 = f 
+    return str(ans//2)
+test = input()
+print(solution(test))
