@@ -1,0 +1,1 @@
+{"name":"Local: c","url":"/home/vedant/Github/Coding-Conest/AtCoder/AtCoder Beginner Contest 274/c.py","tests":[{"id":1666441095476,"input":"4\n1 3 5 2","output":"0\n1\n1\n2\n2\n3\n3\n2\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/vedant/Github/Coding-Conest/AtCoder/AtCoder Beginner Contest 274/c.py","group":"local","local":true}

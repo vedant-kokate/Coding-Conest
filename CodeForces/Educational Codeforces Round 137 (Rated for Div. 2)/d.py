@@ -2,8 +2,6 @@ import sys
 input=sys.stdin.readline
 def I():return list(map(int,input().split()))
 
-
-
 n = int(input())
 temp=input().strip()
 
